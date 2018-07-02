@@ -59,3 +59,27 @@ new Sticky('button',150)
 new Sticky('#topbar')
 ```
 
+### 3.Dialog
+
+基于Jquery
+
+使用方法
+
+```javascript
+var dialog = new Dialog({
+      title:'标题',
+      content:'112233',
+      className:'userclass',
+      buttons:[
+        {text:'确定',action:function(){ alert('确定')}},
+        {text:'取消',action:function(){  dialog.close();}}
+      ]
+    });
+    dialog.open()
+```
+
+用户可以传入 title,content,className,buttons的属性
+
+其中 className 是用户自己写入，如不写，则使用默认CSS样式
+
+提供两个API `.open` 和 `.close` 用于关闭和打开，并可以传入回调函数
