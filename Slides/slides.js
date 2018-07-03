@@ -2,6 +2,7 @@ class Slides{
     constructor(options){
         this.options = options
         this.$element = $(this.options.el)
+        this.current = 0 // 初始化位置
         this.timer = undefined //用来存储 setInterval的 名字。好用来stop 销毁
         this.initHtml()
         this.bindEvents()
