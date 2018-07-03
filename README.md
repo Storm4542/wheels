@@ -83,3 +83,22 @@ var dialog = new Dialog({
 其中 className 是用户自己写入，如不写，则使用默认CSS样式
 
 提供两个API `.open` 和 `.close` 用于关闭和打开，并可以传入回调函数
+
+### 4.Suggestion
+
+基于Jquery，underscore
+
+使用方法
+
+```javascript
+var suggestion = new Suggestion({
+    input: '#el',
+    search: function (text, callback) {
+       //text 是传入的字符串
+      // callback回调需要返回一个结果，该结果数据结构为数组
+    },
+    loadingTemplate:'<b>正在加载中</b>',
+    emptyTemplate : '<b>没找到</b>'
+})
+```
+

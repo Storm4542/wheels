@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.suggestion-wrap{
+    position: relative;
+    display: inline-block
+}
+.suggestion-wrap .suggestionList{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    border: 1px solid ;
+    width: 100%;
+    text-align: center;
+}
+.suggestion-wrap .suggestionList li{
+    border-bottom: 1px solid green
+}
+
+.suggestion-wrap .suggestion-loading{
+    display: none
+}
+.suggestion-wrap .suggestion-empty{
+    display: none
+}
+.suggestion-wrap.loading .suggestion-loading{
+    display: block
+}
+.suggestion-wrap.empty .suggestion-empty{
+    display: block
+}
