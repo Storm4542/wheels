@@ -1,7 +1,7 @@
 # wheels
 ## 1.Tabs
 
-基于 Jquery
+依赖 Jquery
 
 必须使用以下Html结构
 
@@ -28,7 +28,7 @@ new Tabs('.tabs');
 
 ## 2.Sticky
 
-基于 Jquery
+依赖 Jquery
 
 注意 ： 元素的宽度需要自己在CSS中写入，否则可能造成页面混乱
 
@@ -61,7 +61,7 @@ new Sticky('#topbar')
 
 ### 3.Dialog
 
-基于Jquery
+依赖query
 
 使用方法
 
@@ -86,7 +86,7 @@ var dialog = new Dialog({
 
 ### 4.Suggestion
 
-基于Jquery，underscore
+依赖Jquery，underscore
 
 使用方法
 
@@ -100,5 +100,47 @@ var suggestion = new Suggestion({
     loadingTemplate:'<b>正在加载中</b>',
     emptyTemplate : '<b>没找到</b>'
 })
+```
+
+### 5.Slides
+
+依赖Jquery
+
+HTML需要按照以下格式
+
+```html
+   <div class='slides'>
+        <ol>
+            <li>
+                <img src="https://i.loli.net/2018/01/03/5a4c93e92b0e1.png">
+            </li>
+            <li>
+                <img src="https://i.loli.net/2018/01/03/5a4c93e931f93.png">
+            </li>
+            <li>
+                <img src="https://i.loli.net/2018/01/03/5a4c93e938b6b.png">
+            </li>
+        </ol>
+    </div>
+```
+
+使用方法
+
+```javascript
+var slides = new Slides({
+    el:'.slides', //绑定元素
+    autoplay:true, // 是否自动播放
+    controls:true  // 鼠标移入停止轮播，移除启动
+})
+```
+
+API
+
+```javascript
+slides.go(index) //跳转到第index张
+slides.pre() //前一张
+slides.next() //后一张
+slides.play() // 自动播放
+slides.stop() //停止轮播
 ```
 
